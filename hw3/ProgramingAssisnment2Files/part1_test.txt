@@ -1,0 +1,18 @@
+# input vars
+boolean a3 a2 a1 a0 b3 b2 b1 b0 cin
+
+adder 4 F sum3 sum2 sum1 sum0 a3 a2 a1 a0 b3 b2 b1 b0 cin
+
+eval q1 a0^b0
+eval q2 a1^b1
+eval q3 a2^b2
+eval q4 a3^b3
+mux 4 Select q1 q2 q3 q4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+mux 1 G Select cin F
+
+verify F G
+
+eval diff F^G
+satisfy diff
+
+quit
