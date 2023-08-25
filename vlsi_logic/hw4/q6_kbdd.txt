@@ -1,0 +1,4 @@
+boolean a b c Yvar Xvar
+eval Ynode a & !Yvar + !a & c & !Yvar + !a & !c & Yvar + a & b & !Xvar + a & !b & c & Xvar + a & !b & !c & !Xvar + !a & b & Xvar + !a & !b & c & Xvar + !a & !b & !c & !Xvar
+quantify u Forallb Ynode b
+sop Forallb

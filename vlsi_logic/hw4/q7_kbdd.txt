@@ -1,0 +1,21 @@
+boolean a b c d F
+eval z1 !a & b + F
+eval z2 a & !b & d & F
+
+replace z1_F z1 F 1
+replace z1_Fbar z1 F 0
+
+replace z2_F z2 F 1
+replace z2_Fbar z2 F 0
+
+eval dz1 !(z1_Fbar ^ z1_F)
+eval dz2 !(z2_Fbar ^ z2_F)
+
+sop dz1
+sop dz2
+
+eval p dz1 & dz2
+sop p
+quantify u Foralld p d
+
+sop Foralld
